@@ -1,7 +1,7 @@
 {
   "name": "responsive-tailwind-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project consist of a **web page** about **Belajar Responsive Website**.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

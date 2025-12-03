@@ -1,41 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Tailwind Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Demo</title>
 
-  <!-- Tailwind Compile -->
-  <link rel="stylesheet" href="./dist/output.css">
+    <!-- Link to your CSS file -->
+    <!-- This connects the HTML with your custom styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-white text-gray-900">
+<body>
 
-<!-- Andrea -->
+    <!-- Navigation bar -->
+    <!-- This is the top section of the website -->
+    <nav class="navbar">
+        <h1 class="logo">Mi Página</h1>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
 
-<!--------------- HEADER --------------->
-<header>
+    <!-- Hero Section -->
+    <!-- Big banner area with main message -->
+    <header class="hero">
+        <h2>Bienvenido a mi web</h2>
+        <p>Esta es una demo para que no jodas más 😊</p>
+        <button class="btn">Saber más</button>
+    </header>
 
-</header>
-<!---------------- MAIN I --------------->
-<main>
+    <!-- Content Section -->
+    <!-- Main content cards -->
+    <section class="content">
+        <div class="card">
+            <h3>Título 1</h3>
+            <p>Texto de ejemplo para la tarjeta 1.</p>
+        </div>
 
-    <section>
+        <div class="card">
+            <h3>Título 2</h3>
+            <p>Texto de ejemplo para la tarjeta 2.</p>
+        </div>
 
+        <div class="card">
+            <h3>Título 3</h3>
+            <p>Texto de ejemplo para la tarjeta 3.</p>
+        </div>
     </section>
 
-<!-- David -->
-<!-------------- MAIN II --------------->
-    <section>
-        
-    </section>
-</main>
-
-<!-------------- FOOTER --------------->
-<footer>
-
-</footer>
+    <!-- Footer -->
+    <!-- Bottom part of the website -->
+    <footer class="footer">
+        <p>© 2025 — Sebas rules</p>
+    </footer>
 
 </body>
-
 </html>
