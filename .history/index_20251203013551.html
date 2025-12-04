@@ -17,12 +17,9 @@
 <!-- Andrea -->
 
 <!--------------- HEADER --------------->
-<header class="w-full bg-white">
-
-    <!--checkbox to manage overlay -->
-    <input type="checkbox" id="menu-toggle" class="hidden peer">
-    <div class="max-w-6xl mx-auto flex items-center justify-between gap-4 px-4 py-4 md:py-6">
-
+<header class="w-full bg-white bg-[url('./assets/images/background-img-ellipse.png')] bg-no-repeat bg-left-bottom md:bg-none">
+    <div class="max-w-6xl mx-auto flex flex-col items-center gap-8 px-4 py-8
+            md:flex-row md:items-center md:justify-between md:gap-4 md:py-6">
     <!-- Logo + text “It’s me” -->
     <div class="flex items-center gap-3">
     <!-- Logo -->
@@ -36,7 +33,8 @@
     </div>
 
     <!-- Navegation (tablet y desktop) -->
-    <nav class="hidden md:flex flex-1 justify-center gap-8 text-sm md:text-base text-gray-500">
+    <nav class="flex flex-col items-center gap-6 text-sm md:text-base text-gray-500
+            md:flex-row md:flex-1 md:justify-center md:gap-8">
         <a href="#" class="hover:text-gray-900 transition-colors">home</a>
         <a href="#" class="hover:text-gray-900 transition-colors">about</a>
         <a href="#" class="hover:text-gray-900 transition-colors">contact</a>
@@ -72,58 +70,22 @@
         <!-- Download CV (all views) -->
         <button
         class="inline-flex items-center rounded-full border-2 border-[#EF5DA8]
-        px-5 py-1.5 md:px-6 md:py-2 text-sm md:text-base font-medium
+        px-8 py-2 text-sm md:text-base font-medium
         text-[#393F48] bg-white whitespace-nowrap
         hover:bg-[#EF5DA8] hover:text-white
-        transition-all duration-300">
+        transition-all duration-300
+        fixed bottom-8 left-1/2 -translate-x-1/2
+        md:static md:translate-x-0">
         Download CV
         </button>
 
         <!-- Menu icon (only mobile) -->
-        <label for="menu-toggle" class="md:hidden text-3xl text-[#393F48] cursor-pointer">
+        <button class="md:hidden text-2xl text-gray-700">
         ☰
-        </label>
+        </button>
     </div>
 
     </div>
-
-    <!-- Mobile menu overlay -->
-    <div class="fixed inset-0 bg-white z-50 flex flex-col items-center gap-10 pt-16
-            bg-[url('../assets/images/background-img-ellipse.png')] bg-no-repeat bg-left-bottom
-            translate-y-full peer-checked:translate-y-0
-            transition-all duration-300 md:hidden">
-
-
-    <!-- Logo + texto center -->
-    <div class="flex flex-col items-center gap-2">
-    <img src="./assets/logos/header-logo-person.png" class="w-12 h-12 rounded-full">
-    <span class="text-lg font-semibold text-[#393F48]">It’s me</span>
-    </div>
-
-    <!-- Menú vertical -->
-    <nav class="flex flex-col items-center gap-6 text-base text-[#393F48]">
-    <nav class="flex flex-col items-center gap-6 text-base text-[#393F48]">
-    <!-- HOME close overlay -->
-    <label for="menu-toggle" class="cursor-pointer hover:text-pink-500">
-    home
-    </label>
-
-    <a href="#" class="hover:text-pink-500">about</a>
-    <a href="#" class="hover:text-pink-500">contact</a>
-    </nav>
-
-    <!-- Botón Download CV abajo -->
-    <button
-    class="inline-flex items-center rounded-full border-2 border-[#EF5DA8]
-            px-8 py-2 text-sm font-medium
-            text-[#393F48] bg-white whitespace-nowrap
-            hover:bg-[#EF5DA8] hover:text-white transition-all duration-300
-            absolute bottom-10">
-    Download CV
-    </button>
-
-    </div>    
-
 </header>
 <!---------------- MAIN I --------------->
 <main>
