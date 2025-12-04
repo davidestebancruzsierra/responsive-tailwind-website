@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tailwind Website</title>
+
+    <!-- Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Compile -->
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-white text-gray-900 font-[Poppins]">
+
+    <!-- Andrea -->
+    <div class="md:bg-[url('../assets/images/bg-circle-group-main.png')] md:bg-no-repeat md:bg-right-top"></div>
+
+<!--------------- HEADER --------------->
+<header class="w-full bg-white">
+
+    <!--checkbox to manage overlay -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+    <div class="max-w-6xl mx-auto flex items-center justify-between gap-4 px-4 py-4 md:py-6">
+
+    <!-- Logo + text “It’s me” -->
+    <div class="flex items-center gap-3">
+    <!-- Logo -->
+        <img
+        src="./assets/logos/header-logo-person.png"
+        alt="Profile avatar"
+        class="w-10 h-10 rounded-full object-cover">
+        <span class="text-lg md:text-xl font-semibold text-[#393F48]">
+        It’s me
+        </span>
+    </div>
+
+    <!-- Navegation (tablet y desktop) -->
+    <nav class="hidden md:flex flex-1 justify-center gap-8 text-sm md:text-base text-gray-500">
+        <a href="#" class="hover:text-gray-900 transition-colors">home</a>
+        <a href="#" class="hover:text-gray-900 transition-colors">about</a>
+        <a href="#" class="hover:text-gray-900 transition-colors">contact</a>
+    </nav>
+
+    <!-- Icons -->
+    <div class="flex items-center gap-4">
+
+    <!-- Icons social media (desktop) -->
+    <div class="hidden lg:flex items-center gap-3">
+        <img
+            src="./assets/icons/github.jpg"
+            alt="GitHub icon"
+            class="w-6 h-6 object-contain"
+        >
+        <img
+            src="./assets/icons/instagram.png"
+            alt="Instagram icon"
+            class="w-6 h-6 object-contain"
+        >
+        <img
+            src="./assets/icons/tiktok.png"
+            alt="TikTok icon"
+            class="w-6 h-6 object-contain"
+        >
+        <img
+            src="./assets/icons/yt.png"
+            alt="Youtube icon"
+            class="w-6 h-6 object-contain"
+        >
+    </div>
+
+        <!-- Download CV (all views) -->
+        <button
+        class="inline-flex items-center rounded-full border-2 border-[#EF5DA8]
+        px-5 py-1.5 md:px-6 md:py-2 text-sm md:text-base font-medium
+        text-[#393F48] bg-white whitespace-nowrap
+        hover:bg-[#EF5DA8] hover:text-white
+        transition-all duration-300">
+        Download CV
+        </button>
+
+        <!-- Menu icon (only mobile) -->
+        <label for="menu-toggle" class="md:hidden text-3xl text-[#393F48] cursor-pointer">
+        ☰
+        </label>
+    </div>
+
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div class="fixed inset-0 bg-white z-50 flex flex-col items-center gap-10 pt-16
+            bg-[url('../assets/images/background-img-ellipse.png')] bg-no-repeat bg-left-bottom
+            translate-y-full peer-checked:translate-y-0
+            transition-all duration-300 md:hidden">
+
+
+    <!-- Logo + texto center -->
+    <div class="flex flex-col items-center gap-2">
+    <img src="./assets/logos/header-logo-person.png" class="w-12 h-12 rounded-full">
+    <span class="text-lg font-semibold text-[#393F48]">It’s me</span>
+    </div>
+
+    <!-- Menú vertical -->
+    <nav class="flex flex-col items-center gap-6 text-base text-[#393F48]">
+    <nav class="flex flex-col items-center gap-6 text-base text-[#393F48]">
+    <!-- HOME close overlay -->
+    <label for="menu-toggle" class="cursor-pointer hover:text-pink-500">
+    home
+    </label>
+
+    <a href="#" class="hover:text-pink-500">about</a>
+    <a href="#" class="hover:text-pink-500">contact</a>
+    </nav>
+
+    <!-- Botón Download CV abajo -->
+    <button
+    class="inline-flex items-center rounded-full border-2 border-[#EF5DA8]
+            px-8 py-2 text-sm font-medium
+            text-[#393F48] bg-white whitespace-nowrap
+            hover:bg-[#EF5DA8] hover:text-white transition-all duration-300
+            absolute bottom-10">
+    Download CV
+    </button>
+
+    </div>    
+
+</header>
+  <!---------------- MAIN I --------------->
+  <main>
+
+    <!-- SECTION 1: HERO -->
+    <section
+      class="relative max-w-6xl mx-auto px-4 py-16 md:py-20 lg:py-24
+             bg-[url('../assets/images/bg-circle-group-main.png')] bg-no-repeat bg-right-top
+             md:bg-none">
+
+      <!-- Layout: texto + (columna de redes en tablet) -->
+      <div class="md:grid md:grid-cols-[3fr_auto] md:items-center md:gap-10">
+
+        <!-- Columna izquierda: título, texto y botón -->
+        <div>
+
+          <!-- Título grande con íconos que cambian según viewport -->
+          <div class="space-y-3 md:space-y-4 text-[#393F48]">
+            <!-- Línea 1 -->
+            <div class="flex items-center gap-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
+              <span>Let’s learn</span>
+              <!-- Desktop / Tablet: libro -->
+              <img
+                src="./assets/icons/ic-s1-Book_open_light.png"
+                alt="Book icon"
+                class="hidden md:inline w-7 h-7 md:w-8 md:h-8"
+              >
+              <!-- Mobile: red rosa -->
+              <img
+                src="./assets/icons/ic-s1-Subttasks_light.png"
+                alt="Subtasks icon"
+                class="inline md:hidden w-6 h-6"
+              >
+            </div>
+
+            <!-- Línea 2 -->
+            <div class="flex items-center gap-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
+              <span>to code</span>
+              <!-- Desktop / Tablet: red rosa -->
+              <img
+                src="./assets/icons/ic-s1-Subttasks_light.png"
+                alt="Subtasks icon"
+                class="hidden md:inline w-7 h-7 md:w-8 md:h-8"
+              >
+              <!-- Mobile: libro -->
+              <img
+                src="./assets/icons/ic-s1-Book_open_light.png"
+                alt="Book icon"
+                class="inline md:hidden w-6 h-6"
+              >
+            </div>
+
+            <!-- Línea 3 -->
+            <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
+              an application
+            </div>
+          </div>
+
+          <!-- Texto descriptivo -->
+          <p class="mt-8 max-w-md text-sm sm:text-base text-[#393F48]">
+            with me <span class="text-[#EF5DA8]">arif iskandar</span>, a software developer
+            who loves to share how to code in many programing languages and multi platforms.
+          </p>
+
+          <!-- Botón Start learn -->
+          <button
+            class="mt-6 inline-flex items-center rounded-full bg-[#EF5DA8]
+                   px-6 py-2 text-sm sm:text-base font-medium text-white
+                   hover:bg-[#e64f9e] transition-all duration-300 shadow-sm">
+            Start learn
+          </button>
+
+          <!-- Iconos de redes en MOBILE: fila horizontal -->
+          <div class="mt-6 flex items-center gap-4 md:hidden">
+            <img src="./assets/icons/github.jpg" alt="GitHub" class="w-6 h-6">
+            <img src="./assets/icons/instagram.png" alt="Instagram" class="w-6 h-6">
+            <img src="./assets/icons/tiktok.png" alt="TikTok" class="w-6 h-6">
+            <img src="./assets/icons/youtube.png" alt="YouTube" class="w-6 h-6">
+          </div>
+
+        </div>
+
+        <!-- Columna derecha: iconos de redes en TABLET (columna vertical) -->
+        <div class="hidden md:flex lg:hidden flex-col items-center gap-4">
+          <img src="./assets/icons/github.jpg" alt="GitHub" class="w-6 h-6">
+          <img src="./assets/icons/instagram.png" alt="Instagram" class="w-6 h-6">
+          <img src="./assets/icons/tiktok.png" alt="TikTok" class="w-6 h-6">
+          <img src="./assets/icons/youtube.png" alt="YouTube" class="w-6 h-6">
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- SECTION 2 -->
+    <section>
+
+    </section>
+<!-- David -->
+<!-------------- MAIN II --------------->
+    <section>
+        
+    </section>
+</main>
+
+<!-------------- FOOTER --------------->
+<footer>
+
+</footer>
+
+</body>
+
+</html>
