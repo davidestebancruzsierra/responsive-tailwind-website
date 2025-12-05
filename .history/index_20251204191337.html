@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tailwind Website</title>
+
+    <!-- Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Compile -->
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-white text-gray-900 font-[Poppins]">
+
+    <!-- Andrea -->
+    <div class="md:bg-[url('../assets/images/bg-circle-group-main.png')] md:bg-no-repeat md:bg-right-top">
+
+<!--------------- HEADER --------------->
+<header class="w-full bg-white">
+
+    <!--checkbox to manage overlay -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+    <div class="max-w-6xl mx-auto flex items-center gap-8 px-4 py-4 md:py-6">
+
+
+    <!-- Logo + text “It’s me” -->
+    <div class="flex items-center gap-3">
+    <!-- Logo -->
+        <img
+        src="./assets/logos/header-logo-person.png"
+        alt="Profile avatar"
+        class="w-10 h-10 rounded-full object-cover">
+        <span class="text-lg md:text-xl font-semibold text-[#393F48]">
+        It’s me
+        </span>
+    </div>
+
+    <!-- Navegation (tablet y desktop) -->
+    <nav class="hidden md:flex gap-8 text-sm md:text-base text-gray-500">
+        <a href="#" class="hover:text-gray-900 transition-colors">home</a>
+        <a href="#" class="hover:text-gray-900 transition-colors">about</a>
+        <a href="#" class="hover:text-gray-900 transition-colors">contact</a>
+    </nav>
+
+    <!-- Icons -->
+    <div class="flex items-center gap-4 ml-auto">
+
+    <!-- Icons social media (desktop) -->
+    <div class="hidden lg:flex items-center gap-[5mm]">
+        <img
+            src="./assets/icons/github.jpg"
+            alt="GitHub icon"
+            class="w-6 h-6 object-contain"
+        >
+        <img
+            src="./assets/icons/instagram.png"
+            alt="Instagram icon"
+            class="w-6 h-6 object-contain"
+        >
+        <img
+            src="./assets/icons/tiktok.png"
+            alt="TikTok icon"
+            class="w-6 h-6 object-contain"
+        >
+        <img
+            src="./assets/icons/yt.png"
+            alt="Youtube icon"
+            class="w-6 h-6 object-contain"
+        >
+    </div>
+
+        <!-- Download CV (all views) -->
+        <button
+        class="inline-flex items-center rounded-full border-2 border-[#EF5DA8]
+        px-5 py-1.5 md:px-6 md:py-2 text-sm md:text-base font-medium
+        text-[#393F48] bg-white whitespace-nowrap
+        hover:bg-[#EF5DA8] hover:text-white
+        transition-all duration-300">
+        Download CV
+        </button>
+
+        <!-- Menu icon (only mobile) -->
+        <label for="menu-toggle" class="md:hidden text-3xl text-[#393F48] cursor-pointer">
+        ☰
+        </label>
+    </div>
+
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div class="fixed inset-0 bg-white z-50 flex flex-col items-center gap-10 pt-16
+            bg-[url('../assets/images/background-img-ellipse.png')] bg-no-repeat bg-left-bottom
+            translate-y-full peer-checked:translate-y-0
+            transition-all duration-300 md:hidden">
+
+
+    <!-- Logo + texto center -->
+    <div class="flex flex-col items-center gap-2">
+    <img src="./assets/logos/header-logo-person.png" class="w-12 h-12 rounded-full">
+    <span class="text-lg font-semibold text-[#393F48]">It’s me</span>
+    </div>
+
+    <!-- Menú vertical -->
+    <nav class="flex flex-col items-center gap-6 text-base text-[#393F48]">
+    <!-- HOME close overlay -->
+    <label for="menu-toggle" class="cursor-pointer hover:text-pink-500">
+    home
+    </label>
+
+    <a href="#" class="hover:text-pink-500">about</a>
+    <a href="#" class="hover:text-pink-500">contact</a>
+    </nav>
+
+    <!-- Botón Download CV abajo -->
+    <button
+    class="inline-flex items-center rounded-full border-2 border-[#EF5DA8]
+            px-8 py-2 text-sm font-medium
+            text-[#393F48] bg-white whitespace-nowrap
+            hover:bg-[#EF5DA8] hover:text-white transition-all duration-300
+            absolute bottom-10">
+    Download CV
+    </button>
+
+    </div>    
+
+</header>
+    <!---------------- MAIN I --------------->
+    <main>
+
+    <!-- SECTION 1: HERO -->
+    <section
+        class="relative max-w-6xl mx-auto px-4 py-16 md:py-20 lg:py-24
+            bg-[url('../assets/images/bg-circle-group-main.png')] bg-no-repeat bg-right-top
+            md:bg-none">
+
+    <!-- Layout: texto + (columna de redes en tablet) -->
+    <div class="md:grid md:grid-cols-[3fr_auto] md:items-center md:gap-10">
+
+        <!-- Columna izquierda: título + (texto y botón que pasan a la derecha en desktop) -->
+        <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-16">
+
+          <!-- Columna título -->
+          <div>
+            <!-- Título grande con íconos que cambian según viewport -->
+            <div class="space-y-3 md:space-y-4 text-[#393F48]">
+              <!-- Línea 1 -->
+              <div class="flex items-center gap-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
+                <span>Let’s learn</span>
+                <!-- Desktop / Tablet: libro -->
+                <img
+                  src="./assets/icons/ic-s1-Book_open_light.png"
+                  alt="Book icon"
+                  class="hidden md:inline w-7 h-7 md:w-8 md:h-8"
+                >
+                <!-- Mobile: red rosa -->
+                <img
+                  src="./assets/icons/ic-s1-Subttasks_light.png"
+                  alt="Subtasks icon"
+                  class="inline md:hidden w-6 h-6"
+                >
+              </div>
+
+              <!-- Línea 2 -->
+              <div class="flex items-center gap-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
+                <span>to code</span>
+                <!-- Desktop / Tablet: red rosa -->
+                <img
+                  src="./assets/icons/ic-s1-Subttasks_light.png"
+                  alt="Subtasks icon"
+                  class="hidden md:inline w-7 h-7 md:w-8 md:h-8"
+                >
+                <!-- Mobile: libro -->
+                <img
+                  src="./assets/icons/ic-s1-Book_open_light.png"
+                  alt="Book icon"
+                  class="inline md:hidden w-6 h-6"
+                >
+              </div>
+
+              <!-- Línea 3 -->
+              <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
+                an application
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna texto + botón (bloque A) -->
+          <div class="mt-8 lg:mt-20 lg:pl-32">
+            <!-- Texto descriptivo -->
+            <p class="max-w-md text-sm sm:text-base text-[#393F48]">
+              with me <span class="text-[#EF5DA8]">arif iskandar</span>, a software developer
+              who loves to share how to code in many programing languages and multi platforms.
+            </p>
+
+    <!-- Botón Start learn (tablet y desktop) -->
+    <button
+    class="mt-6 hidden md:inline-flex items-center rounded-full bg-[#EF5DA8]
+            px-6 py-2 text-sm sm:text-base font-medium text-white
+            hover:bg-[#e64f9e] transition-all duration-300 shadow-sm">
+    Start learn
+    </button>
+
+    <!-- Botón + iconos de redes en MOBILE: fila horizontal -->
+    <div class="mt-6 flex items-center gap-4 md:hidden">
+    <button
+        class="inline-flex items-center rounded-full bg-[#EF5DA8]
+            px-6 py-2 text-sm sm:text-base font-medium text-white
+            hover:bg-[#e64f9e] transition-all duration-300 shadow-sm">
+        Start learn
+    </button>
+
+    <div class="flex items-center gap-[4mm]">
+        <img src="./assets/icons/github.jpg" alt="GitHub" class="w-6 h-6">
+        <img src="./assets/icons/instagram.png" alt="Instagram" class="w-6 h-6">
+        <img src="./assets/icons/tiktok.png" alt="TikTok" class="w-6 h-6">
+        <img src="./assets/icons/yt.png" alt="YouTube" class="w-6 h-6">
+    </div>
+    </div>
+
+
+        </div>
+        <!-- Columna derecha: iconos de redes en TABLET (columna vertical) -->
+        <div class="hidden md:flex lg:hidden flex-col items-center gap-[4mm]
+            absolute md:top-72 md:right-10">
+        <img src="./assets/icons/github.jpg" alt="GitHub" class="w-6 h-6">
+        <img src="./assets/icons/instagram.png" alt="Instagram" class="w-6 h-6">
+        <img src="./assets/icons/tiktok.png" alt="TikTok" class="w-6 h-6">
+        <img src="./assets/icons/yt.png" alt="YouTube" class="w-6 h-6">
+        </div>
+
+    
+    </section>
+    </div>
+    <!-- SECTION 2: GRID DE CARDS -->
+    <section class="max-w-6xl mx-auto px-4 py-16 md:py-20 lg:py-24">
+
+      <!-- GRID DE CARDS -->
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Card 1 (siempre visible) -->
+        <article class="flex flex-col rounded-3xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+          <img src="./assets/images/card-1.png" alt="Bookies app" class="w-full h-56 object-cover">
+          <div class="p-4 sm:p-5">
+            <h3 class="text-base sm:text-lg font-semibold text-[#393F48]">Bookies</h3>
+            <p class="mt-1 text-xs sm:text-sm text-gray-500">Read digital book app</p>
+          </div>
+        </article>
+
+        <!-- Card 2 (siempre visible) -->
+        <article class="flex flex-col rounded-3xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+          <img src="./assets/images/card-2.png" alt="BWallet app" class="w-full h-56 object-cover">
+          <div class="p-4 sm:p-5">
+            <h3 class="text-base sm:text-lg font-semibold text-[#393F48]">BWallet</h3>
+            <p class="mt-1 text-xs sm:text-sm text-gray-500">Business wallet</p>
+          </div>
+        </article>
+
+        <!-- Card 3 (siempre visible) -->
+        <article class="flex flex-col rounded-3xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+          <img src="./assets/images/card-3.png" alt="Gojek app" class="w-full h-56 object-cover">
+          <div class="p-4 sm:p-5">
+            <h3 class="text-base sm:text-lg font-semibold text-[#393F48]">Gojek</h3>
+            <p class="mt-1 text-xs sm:text-sm text-gray-500">Home screen gojek apps</p>
+          </div>
+        </article>
+
+        <!-- Card 4 (solo tablet y desktop) -->
+        <article class="hidden md:flex md:flex-col rounded-3xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+          <img src="./assets/images/card-4.png" alt="Bookies app" class="w-full h-56 object-cover">
+          <div class="p-4 sm:p-5">
+            <h3 class="text-base sm:text-lg font-semibold text-[#393F48]">Bookies</h3>
+            <p class="mt-1 text-xs sm:text-sm text-gray-500">Read digital book app</p>
+          </div>
+        </article>
+
+        <!-- Card 5 (solo desktop) -->
+        <article class="hidden lg:flex lg:flex-col rounded-3xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+          <img src="./assets/images/card-5.png" alt="BWallet app" class="w-full h-56 object-cover">
+          <div class="p-4 sm:p-5">
+            <h3 class="text-base sm:text-lg font-semibold text-[#393F48]">BWallet</h3>
+            <p class="mt-1 text-xs sm:text-sm text-gray-500">Business wallet</p>
+          </div>
+        </article>
+
+        <!-- Card 6 (solo desktop) -->
+        <article class="hidden lg:flex lg:flex-col rounded-3xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+          <img src="./assets/images/card-6.png" alt="Gojek app" class="w-full h-56 object-cover">
+          <div class="p-4 sm:p-5">
+            <h3 class="text-base sm:text-lg font-semibold text-[#393F48]">Gojek</h3>
+            <p class="mt-1 text-xs sm:text-sm text-gray-500">Home screen gojek apps</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- BOTÓN LOAD MORE (COMÚN A TODOS LOS MODOS) -->
+      <div class="flex justify-center mt-10">
+        <button
+          class="inline-flex items-center rounded-full border border-[#EF5DA8]
+                px-6 py-2 text-sm font-medium text-[#393F48] bg-white
+                hover:bg-[#EF5DA8] hover:text-white transition-all duration-300">
+          Load more
+        </button>
+      </div>
+
+    </section>
+
+<!-- David -->
+<!-------------- MAIN II --------------->
+    <sect>
+        
+    </sect  ion>
+</main>
+
+<!-------------- FOOTER --------------->
+<footer>
+
+</footer>
+
+</body>
+
+</html>
