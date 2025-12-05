@@ -1,60 +1,138 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Demo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Tailwind Website</title>
 
-    <!-- Link to your CSS file -->
-    <!-- This connects the HTML with your custom styles -->
-    <link rel="stylesheet" href="styles.css">
+  <!-- Tailwind Compile -->
+  <link rel="stylesheet" href="./dist/output.css">
+  <link rel="stylesheet" href="./src/styles.css">
 </head>
 
 <body>
 
-    <!-- Navigation bar -->
-    <!-- This is the top section of the website -->
-    <nav class="navbar">
-        <h1 class="logo">Mi Página</h1>
-        <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Acerca</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
+<!-- Andrea -->
+<header>
+</header>
 
-    <!-- Hero Section -->
-    <!-- Big banner area with main message -->
-    <header class="hero">
-        <h2>Bienvenido a mi web</h2>
-        <p>Esta es una demo para que no jodas más 😊</p>
-        <button class="btn">Saber más</button>
-    </header>
+<main>
 
-    <!-- Content Section -->
-    <!-- Main content cards -->
-    <section class="content">
-        <div class="card">
-            <h3>Título 1</h3>
-            <p>Texto de ejemplo para la tarjeta 1.</p>
+  <!-- Sección vacía (Andrea) -->
+  <section></section>
+
+  <!-- Sección David -->
+  <section>
+    <div class="about-container">
+<div class="about">
+  <div class="about-1"> 
+    <div class="about-photo">
+    <img src="assets/Images/persona1.png" alt="persona1">
+      </div>
+      <h2 class="about-title">
+        It's me <span>Arif Iskandar</span>
+      </h2>
+  <div class="about-2"<p class="about-description">
+        I like to code and keep it simple, try something new, and learn more.
+        I think sharing knowledge is the best practice to improve my skills,
+        and I try to do it.
+      </p></div>
+</div>
+
+</div>
+
+      <!-- ================= TESTIMONIOS ================= -->
+      <div class="testimonials">
+
+        <!-- CARD 1 -->
+        <div class="People-reviews">
+          <img src="assets/Images/persona2.png" class="avatar" alt="persona2">
+          <div>
+            <h3 class="name">Marilyn Siphron</h3>
+            <p class="role">Remix and React Training</p>
+            <p class="comment">
+              Tellus mauris adipiscing dignissim sodales. Id dui venenatis mollis faucibus.
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-            <h3>Título 2</h3>
-            <p>Texto de ejemplo para la tarjeta 2.</p>
+        <!-- CARD 2 -->
+        <div class="People-reviews">
+          <img src="assets/Images/persona3.png" class="avatar" alt="persona3">
+          <div>
+            <h3 class="name">Adison Westervelt</h3>
+            <p class="role">Senior Program Manager at Microsoft</p>
+            <p class="comment">
+              Hendrerit diam a, morbi tristique egestas commodo ullamcorper ut. 
+              Aenean ipsum tempus, felis nibh amet mollis id sem sit.
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-            <h3>Título 3</h3>
-            <p>Texto de ejemplo para la tarjeta 3.</p>
+        <!-- CARD 3 -->
+        <div class="People-reviews">
+          <img src="assets/Images/persona4.png" class="avatar" alt="persona4">
+          <div>
+            <h3 class="name">Marley Siphron</h3>
+            <p class="role">Jobs</p>
+            <p class="comment">
+              Habitant ut augue eu accumsan tellus ultrices integer. 
+              Gravida elementum egestas tellus condimentum bibendum.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <!-- Bottom part of the website -->
-    <footer class="footer">
-        <p>© 2025 — Sebas rules</p>
-    </footer>
+        <!-- CARD 4 -->
+        <div class="People-reviews">
+          <img src="assets/Images/persona 5.png" class="avatar" alt="persona5">
+          <div>
+            <h3 class="name">Marilyn Siphron</h3>
+            <p class="role">Remix and React Training</p>
+            <p class="comment">
+              Libero in egestas pellentesque purus, nullam. 
+              Consectetur commodo odio interdum neque ullamcorper sit.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="People-reviews">
+          <img src="assets/Images/persona6.png" class="avatar" alt="persona6">
+          <div>
+            <h3 class="name">Adison Westervelt</h3>
+            <p class="role">Senior Program Manager at Microsoft</p>
+            <p class="comment">
+              Orci penatibus luctus felis in aliquam adipiscing. 
+              Vulputate condimentum ullamcorper dictumst fusce.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="People-reviews">
+          <img src="assets/Images/persona7.png" class="avatar" alt="persona7">
+          <div>
+            <h3 class="name">Marley Siphron</h3>
+            <p class="role">Jobs</p>
+            <p class="comment">
+              Vitae purus ipsum eget leo at sed facilisi nisl. 
+              Ornare suspendisse netus in nunc eget facilisis gravida.
+            </p>
+          </div>
+        </div>
+
+      </div> <!-- /testimonials -->
+
+    </div> <!-- /about-container -->
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <h2 class="footer-title">What are you waiting for?</h2>
+  <button class="footer-button">Let's Start</button>
+</footer>
 
 </body>
 </html>
