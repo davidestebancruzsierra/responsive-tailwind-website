@@ -1,7 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --accent: #ff3b9a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #393F48;
+  line-height: 1.6;
+  padding: 20px;
+}
+/* Header Section */
+.header {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+.header-left h1 {
+  font-size: 56px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  line-height: 1.2;
 }
