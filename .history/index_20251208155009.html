@@ -12,63 +12,6 @@
 
     <!-- Tailwind Compile -->
     <link rel="stylesheet" href="./dist/output.css">
-<style>
-  /* 1) Flotar suave para un icono del hero */
-  @keyframes float-soft {
-
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-6px);
-    }
-  }
-
-  .animate-float-soft {
-    animation: float-soft 3s ease-in-out infinite;
-  }
-
-  /* 2) Pop in para una card */
-  @keyframes card-pop {
-    0% {
-      transform: scale(0.95);
-      opacity: 0;
-    }
-
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-  .animate-card-pop {
-    animation: card-pop 0.7s ease-out forwards;
-  }
-
-  /* 3) Wiggle para un icono social */
-  @keyframes icon-wiggle {
-
-    0%,
-    100% {
-      transform: rotate(0deg);
-    }
-
-    25% {
-      transform: rotate(-8deg);
-    }
-
-    75% {
-      transform: rotate(8deg);
-    }
-  }
-
-  .animate-icon-wiggle {
-    animation: icon-wiggle 1.2s ease-in-out infinite;
-  }
-</style>
-
 </head>
 
 <!-- Andrea -->
@@ -120,9 +63,10 @@
     <!-- Icons social media (desktop) -->
     <div class="hidden lg:flex items-center gap-[5mm]">
         <img
-          src="./assets/icons/github.jpg"
-          alt="GitHub icon"
-          class="w-6 h-6 object-contain animate-icon-wiggle">
+            src="./assets/icons/github.jpg"
+            alt="GitHub icon"
+            class="w-6 h-6 object-contain"
+        >
         <img
             src="./assets/icons/instagram.png"
             alt="Instagram icon"
@@ -221,10 +165,10 @@
                 <span>Let’s learn</span>
                 <!-- Desktop / Tablet: libro -->
                 <img
-                src="./assets/icons/ic-s1-Book_open_light.png"
-                alt="Book icon"
-                class="hidden md:inline w-7 h-7 md:w-8 md:h-8 animate-float-soft">
-
+                  src="./assets/icons/ic-s1-Book_open_light.png"
+                  alt="Book icon"
+                  class="hidden md:inline w-7 h-7 md:w-8 md:h-8"
+                >
                 <!-- Mobile: red rosa -->
                 <img
                   src="./assets/icons/ic-s1-Subttasks_light.png"
@@ -315,9 +259,7 @@
 
         <!-- CARD 1 – Bookies (fila 1) -->
         <article class="rounded-3xl border-2 border-dashed border-gray-200 p-[4mm] order-2 md:order-1
-                           transition-all duration-300 hover:-translate-y-2 hover:shadow-xl
-                           animate-card-pop">
-
+                   transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
           <div class="flex flex-col">
             <!-- Imagen + iconos superiores -->
             <div class="relative">
