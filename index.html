@@ -452,7 +452,7 @@
 <!-- David -->
       <section class="relative max-w-[1200px] mx-auto px-6 py-16 overflow-hidden">
         <!--Right Circle-->
-        <div class="pointer-events-none absolute inset-0 -z-10 bg-[url('../assets/images/bg-circle-group-main.png')] bg-no-repeat bg-right-top xl:hidden">
+        <div class="pointer-events-none absolute inset-0 -z-10 bg-[url('../assets/images/bg-circle-group-main.png')] bg-no-repeat bg-right-top hidden md:block xl:hidden">
         </div>
         <!--Left Circle-->
         <div class="pointer-events-none absolute inset-0 -z-10 bg-[url('../assets/images/bg-circle-group-main.png')] bg-no-repeat bg-right-top [transform:scaleX(-1)] origin-center hidden xl:block">
@@ -460,14 +460,16 @@
       <!-- Main Box -->
       <div class="flex flex-col lg:flex-row justify-content items-start gap-8 mb-16">
         <!-- Main Box 1.1 -->
-        <div class="flex-1">
-          <h1 class="text-[3.5rem] font-light leading-[1.2] text-gray-800">
+        <div class="flex-1 relative">
+          <h1 class="text-lg md:text-[3.5rem] font-light leading-[1.2] text-gray-800" style="font-size: 33px;">
       It’s me
-      <img src="assets/images/persona1.png" alt="persona1" class="inline-block w-12 h-12 align-middle"> 
+      <img src="assets/images/persona1.png" alt="persona1" class="hidden md:inline-block w-12 h-12 align-middle"> 
       <br>
       <span>Arif Iskandar</span>
 
     </h1>
+        <img src="assets/images/persona1.png" alt="persona1" class="md:hidden absolute -right-30 top-0 w-12 h-12 align-middle">
+    <img src="assets/images/elipse.png" alt="elipse" class="md:hidden absolute -right-31 -top-37 align-middle">
    </div>
       <!-- Main Box 1.2 -->
       <div class="flex-1 max-w-[500px] text-sm text-gray-600">
